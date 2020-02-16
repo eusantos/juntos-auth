@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
   resources :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  post '/cadastra' => 'users#create'
+  post '/login' => 'users#login'
+  get '/busca' => 'users#busca'
+  get '/listar' => 'users#listar'
+  post '/mudasenha' => 'users#mudasenha'
+  delete '/remover' => 'users#remover'
 end
